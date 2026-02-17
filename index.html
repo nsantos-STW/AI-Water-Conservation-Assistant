@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Water Conservation Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-container">
+  <header>
+    <img src="https://i.imgur.com/uwfb1P5.png" alt="Save The Water Logo" class="logo">
+    <h1>AI Water Conservation Assistant</h1>
+    <p>Track • Analyze • Save Water</p>
+  </header>
+
+  <section class="card">
+    <h2>Household Usage</h2>
+    <label>Monthly Water Usage (gallons)</label>
+    <input type="number" id="usage" placeholder="Enter gallons">
+
+    <label>Upload Utility Bill</label>
+    <input type="file" id="billUpload">
+  </section>
+
+  <section class="card">
+    <h2>Daily Habits</h2>
+    <label><input type="checkbox" class="habit" value="long_showers"> Long showers</label>
+    <label><input type="checkbox" class="habit" value="running_tap"> Running tap while brushing</label>
+    <label><input type="checkbox" class="habit" value="full_laundry"> Only full laundry loads</label>
+    <label><input type="checkbox" class="habit" value="lawn_watering"> Frequent lawn watering</label>
+  </section>
+
+  <button onclick="analyzeUsage()">Analyze My Water Use</button>
+
+  <section id="results" class="card results hidden">
+    <h2>Your Water Insights</h2>
+    <p id="analysis"></p>
+    <p id="savings"></p>
+    <p id="forecast"></p>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
